@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FeesTrackingApplication</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FeesTrackingApplication.styles.css" asp-append-version="true" />
+
+    <!-- Sidebar + Animation CSS -->
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 260px;
+            height: 100%;
+            background: #1f2937;
+            padding-top: 70px;
+            transition: 0.4s ease;
+            z-index: 2000;
+        }
+
+            .sidebar.show {
+                left: 0;
+            }
+
+            /* Sidebar Buttons & Links */
+            .sidebar a, .close-btn {
+                display: block;
+                padding: 15px 20px;
+                color: #fff;
+                font-size: 17px;
+                text-decoration: none;
+                border-bottom: 1px solid #2d3748;
+                transition: 0.3s;
+            }
+
+                .sidebar a:hover {
+                    background: #374151;
+                    padding-left: 30px;
+                }
+
+        /* Close Button Styling */
+        .close-btn {
+            text-align: right;
+            font-size: 22px;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+            .close-btn:hover {
+                color: #ff4b4b;
+            }
+
+        /* Shift Content When Sidebar Opens */
+        .content-shift {
+            margin-left: 260px;
+            transition: 0.4s ease;
+        }
+
+        /* Toggle Button Near Navbar */
+        .menu-toggle-btn {
+            font-size: 28px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+            .menu-toggle-btn:hover {
+                opacity: .7;
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- 🔥 Sidebar -->
+    <div id="sidebar" class="sidebar">
+
+        <!-- ❌ Close Button -->
+        <button id="closeMenu" class="close-btn">✖</button>
+
+        <a asp-area="" asp-controller="Home" asp-action="Index">🏠 Dashboard</a>
+        <a asp-area="" asp-controller="Home" asp-action="Privacy">🔒 Privacy</a>
+        <a href="#">📁 Fees Report</a>
+        <a href="#">👨‍🎓 Students</a>
+        <a href="#">⚙️ Settings</a>
+        <a href="#">🚪 Logout</a>
+    </div>
+
+    <!-- 🔥 Your Existing Header (NOT Removed) -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+
+                <!-- Menu Button -->
+                <button id="menuButton" class="menu-toggle-btn">☰</button>
+
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FeesTrackingApplication</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- 🔥 Main Content -->
+    <div id="contentArea" class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- 🔥 Footer -->
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - FeesTrackingApplication -
+            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Toggle Script -->
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const menuButton = document.getElementById("menuButton");
+        const closeMenu = document.getElementById("closeMenu");
+        const content = document.getElementById("contentArea");
+
+        menuButton.addEventListener("click", () => {
+            sidebar.classList.toggle("show");
+            content.classList.toggle("content-shift");
+        });
+
+        closeMenu.addEventListener("click", () => {
+            sidebar.classList.remove("show");
+            content.classList.remove("content-shift");
+        });
+    </script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

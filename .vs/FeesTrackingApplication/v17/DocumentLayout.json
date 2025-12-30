@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 227,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FeesTrackingApplication\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FeesTrackingApplication\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T11:58:52.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "FeesTrackingApplication\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "FeesTrackingApplication\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-30T11:55:41.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "FeesTrackingApplication\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "FeesTrackingApplication\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAANMAAAAAAAAAAAAqwNwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-30T11:53:54.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FeesTrackingApplication\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FeesTrackingApplication\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-30T11:38:13.486Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
