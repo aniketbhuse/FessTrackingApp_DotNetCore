@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null;
+}
+
+@using FeesTrackingApplication.Models
+@model Students; 
+<div class="registration-container">
+    <div class="form-card">
+        <h2 class="animated-title">Join Us Today</h2>
+        <p class="text-center text-muted">Please fill in the details to create your account</p>
+
+        <form asp-action="CretaeAccount" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="PRN_Number" class="form-label">PRN Number</label>
+                    <input asp-for="PRN_Number" class="form-control" placeholder="Enter PRN" />
+                    <span asp-validation-for="PRN_Number" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="UserName" class="form-label">Username</label>
+                    <input asp-for="UserName" class="form-control" placeholder="Choose a username" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label asp-for="FName" class="form-label">First Name</label>
+                    <input asp-for="FName" class="form-control" />
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label asp-for="MName" class="form-label">Middle Name</label>
+                    <input asp-for="MName" class="form-control" />
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label asp-for="LName" class="form-label">Last Name</label>
+                    <input asp-for="LName" class="form-control" />
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email Address</label>
+                <input asp-for="Email" type="email" class="form-control" placeholder="name@example.com" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Phone" class="form-label">Phone Number</label>
+                    <input asp-for="Phone" class="form-control" />
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-check mb-4">
+                <input asp-for="IsActive" class="form-check-input" checked />
+                <label class="form-check-label" asp-for="IsActive">I agree to the terms and conditions</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-2">Create Account</button>
+        </form>
+    </div>
+    @if (ViewBag.error != null)
+    {
+        <p style="color:red">@ViewBag.error</p>
+    }
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+<link rel="stylesheet" href="~/css/site.css" />
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>

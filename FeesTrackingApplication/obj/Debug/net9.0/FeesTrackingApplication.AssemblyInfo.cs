@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FeesTrackingApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cda56a0a7703c26dfde6e3a8ba97cea3f8fad6d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("FeesTrackingApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FeesTrackingApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

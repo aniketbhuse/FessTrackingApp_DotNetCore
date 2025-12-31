@@ -4,10 +4,3 @@
 // Write your JavaScript code.
 
 
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    if (navMenu) navMenu.classList.toggle('active');
-});

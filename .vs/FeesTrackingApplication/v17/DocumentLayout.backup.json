@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\controllers\\forgetpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\controllers\\forgetpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|c:\\users\\aniket\\source\\repos\\feestrackingapplication\\feestrackingapplication\\views\\forgetpassword\\forgetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{379A2B33-4FDA-441C-B8EB-2522445FD05E}|FeesTrackingApplication\\FeesTrackingApplication.csproj|solutionrelative:feestrackingapplication\\views\\forgetpassword\\forgetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 227,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "FeesTrackingApplication\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "FeesTrackingApplication\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T11:58:52.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "site.js",
-              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "FeesTrackingApplication\\wwwroot\\js\\site.js",
-              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "FeesTrackingApplication\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-12-30T11:55:41.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "FeesTrackingApplication\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "FeesTrackingApplication\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAANMAAAAAAAAAAAAqwOEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-30T11:53:54.74Z",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Login\\Login.cshtml",
+              "RelativeDocumentMoniker": "FeesTrackingApplication\\Views\\Login\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Login\\Login.cshtml",
+              "RelativeToolTip": "FeesTrackingApplication\\Views\\Login\\Login.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-31T14:21:05.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ForgetPasswordController.cs",
+              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Controllers\\ForgetPasswordController.cs",
+              "RelativeDocumentMoniker": "FeesTrackingApplication\\Controllers\\ForgetPasswordController.cs",
+              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Controllers\\ForgetPasswordController.cs",
+              "RelativeToolTip": "FeesTrackingApplication\\Controllers\\ForgetPasswordController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T14:19:52.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "FeesTrackingApplication\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "FeesTrackingApplication\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAKoAAAAAAAAAAAAAAA==",
+              "Title": "ForgetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\ForgetPassword\\ForgetPassword.cshtml",
+              "RelativeDocumentMoniker": "FeesTrackingApplication\\Views\\ForgetPassword\\ForgetPassword.cshtml",
+              "ToolTip": "C:\\Users\\Aniket\\source\\repos\\FeesTrackingApplication\\FeesTrackingApplication\\Views\\ForgetPassword\\ForgetPassword.cshtml",
+              "RelativeToolTip": "FeesTrackingApplication\\Views\\ForgetPassword\\ForgetPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-30T11:38:13.486Z",
+              "WhenOpened": "2025-12-31T14:19:14.401Z",
               "EditorCaption": ""
             }
           ]

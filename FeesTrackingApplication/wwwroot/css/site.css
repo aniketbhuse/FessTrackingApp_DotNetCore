@@ -118,42 +118,41 @@ body {
 
 /* Login page */
 
-/* Full-screen gradient background with animation */
-.login-container {
+/* ---------------- Body & Background ---------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* ?? Multi-color animated gradient */
-    background: linear-gradient( -45deg, #4158D0, /* Blue */
+    overflow: hidden;
+    position: relative;
+}
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg,
+    #4158D0, /* Blue */
     #C850C0, /* Pink */
     #FFCC70, /* Yellow */
     #0093E9, /* Sky Blue */
     #F53844, /* Red */
     #8A2BE2, /* Violet */
-    #00C9A7 /* Aqua Green */
-    );
-    background-size: 500% 500%;
-    animation: gradientBG 12s ease infinite;
-    padding: 20px;
+    #00C9A7);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: -1;
 }
 
-/* Animation stays the same */
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
     }
 
-    25% {
-        background-position: 50% 50%;
-    }
-
     50% {
         background-position: 100% 50%;
-    }
-
-    75% {
-        background-position: 50% 50%;
     }
 
     100% {
@@ -161,89 +160,276 @@ body {
     }
 }
 
+/* ---------------- Login Container ---------------- */
+.login-container {
+    display: flex;
+    height: 100vh;
+    padding: 50px;
+    gap: 40px;
+}
 
-/* Login card animation */
-.login-card {
-    width: 390px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    animation: floatIn 0.9s ease-out forwards;
-    transform: translateY(30px);
+/* ---------------- Left Section ---------------- */
+.left-section {
+    flex: 1;
+}
+
+/* Animated Title */
+.animated-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #0a66aa;
+    margin-bottom: 40px;
+    animation: slideIn 1.3s ease forwards;
     opacity: 0;
 }
 
-@keyframes floatIn {
-    to {
+@keyframes slideIn {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-/* Header text styling */
-.login-title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 20px;
+.login-heading {
+    font-size: 34px;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-/* Custom animated input fields */
-.custom-input {
-    border: none;
-    border-radius: 12px;
+.signin-label {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #f0f0f0;
+}
+
+label {
+    font-size: 15px;
+    margin-top: 15px;
+    display: block;
+    color: black;
+}
+
+input {
+    width: 80%;
     padding: 12px;
-    background: rgba(255,255,255,0.4);
-    backdrop-filter: blur(8px);
-    color: #fff;
-    font-weight: 500;
-    transition: all .35s ease;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #bdbdbd;
+    outline: none;
 }
 
-    .custom-input::placeholder {
-        /*color: #f0f0f0; */
-        opacity: 0.9;
-    }
+/* Error Message */
+.error-msg {
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
 
-    .custom-input:focus {
-        outline: none;
-        /*box-shadow: 0 0 10px #fff; */
-        background: rgba(255,255,255,0.6);
-    }
-
-/* Animated login button */
+/* Login Button */
 .btn-login {
-    background: #4158D0;
-    padding: 12px;
-    color: #fff;
-    width: 100%;
-    border-radius: 50px;
-    font-weight: 600;
-    letter-spacing: .5px;
-    transition: 0.4s;
+    display: block;
+    width: 85%;
+    padding: 15px;
+    background: #006db6;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
     border: none;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
     .btn-login:hover {
-        background: #C850C0;
-        transform: scale(1.08);
-        box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+        background: #055c9d;
     }
 
-/* Forgot password link hover animation */
-.forgot-link {
-    color: #fff;
-    font-size: 14px;
+.forgot {
     display: block;
-    text-align: center;
     margin-top: 15px;
-    transition: 0.3s ease;
+    font-size: 14px;
+    color: #f0f0f0;
+    text-decoration: none;
 }
 
-    .forgot-link:hover {
-        color: #FFEE93;
-        letter-spacing: 1px;
+/* Divider */
+.divider {
+    width: 2px;
+    background: rgba(255, 255, 255, 0.4);
+    height: 90vh;
+}
+
+/* ---------------- Right Section ---------------- */
+.right-section {
+    flex: 1;
+    text-align: center;
+    padding-top: 120px;
+    color: #ffffff;
+}
+
+    .right-section h3 {
+        font-size: 26px;
+        line-height: 1.4;
+        margin-bottom: 30px;
     }
+
+.btn-create {
+    border: 2px solid #ffffff;
+    padding: 12px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .btn-create:hover {
+        background: #ffffff;
+        color: #0a66aa;
+    }
+
+/* ---------------- Logout and User Name section ---------------- */
+
+.user-info {
+    font-weight: bold;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.logoutForm {
+    display: inline;
+}
+
+    .logoutForm button {
+        padding: 5px 10px;
+    }
+
+
+/* ---------------- Create Account Section ---------------- */
+
+/* Container styling */
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Use 100vh to ensure it fills the screen, or 'auto' if you have a header */
+    min-height: 100vh;
+    padding: 40px 20px; /* Increased vertical padding for breathing room on mobile */
+    background-color: #f8f9fa;
+    /* Ensure overflow is allowed */
+    overflow-y: auto;
+}
+
+html, body {
+    height: auto; /* Allow the body to grow with content */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0;
+    padding: 0;
+}
+
+/* Card Styling */
+.form-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+}
+
+/* --- ANIMATED TITLE --- */
+.animated-title {
+    text-align: center;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    animation: showHideLoop 4s ease-in-out infinite;
+}
+
+/* Animation that repeats forever */
+@keyframes showHideLoop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+
+/* Form Controls */
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.btn-primary {
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+    }
+
+
+
+.user-name-animate {
+    font-weight: 600;
+    color: #4b4b4b;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    animation: userBlinkSlide 4s ease-in-out infinite;
+}
+
+/* Looping Animation */
+@keyframes userBlinkSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+}
