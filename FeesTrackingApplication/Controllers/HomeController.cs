@@ -1,5 +1,7 @@
 using System.Diagnostics;
+using FeesTrackingApplication.Data;
 using FeesTrackingApplication.Models;
+using FeesTrackingApplication.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FeesTrackingApplication.Controllers
@@ -11,8 +13,8 @@ namespace FeesTrackingApplication.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-        }
 
+        }
         public IActionResult Index()
         {
             return View();

@@ -1,1 +1,110 @@
-﻿<p>Dashboard Works</p>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Batch Management</title>
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- HEADER -->
+        <header class="page-header">
+            <div class="header-left">
+                <h1>Batch Management</h1>
+                <p>Manage and organize your batches efficiently</p>
+            </div>
+
+            <div class="header-actions">
+                <button class="btn btn-white">
+                    🔍 Search
+                </button>
+
+                <div class="view-toggle">
+                    <button class="toggle-btn active" id="tableViewBtn">☰</button>
+                    <button class="toggle-btn" id="cardViewBtn">▦</button>
+                </div>
+
+                <button class="btn btn-outline">
+                    ➕ Create Batch
+                </button>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <!-- TABLE VIEW -->
+            <div class="table-wrapper view-container" id="tableView">
+                <table class="batch-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Batch Name</th>
+                            <th>Description</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Records dynamically filled -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card-wrapper view-container hidden" id="cardView">
+                <div class="card-grid" id="cardContainer">
+                    <!-- Cards dynamically filled -->
+                </div>
+            </div>
+
+            <div class="pagination" id="pagination"></div>
+
+
+        </main>
+
+        <!-- MODAL -->
+        <div class="">
+            <div class="modal">
+                <div class="modal-header">
+                    <h2>Create New Batch</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <label>Batch Name</label>
+                        <input type="text">
+
+                        <label>Description</label>
+                        <textarea rows="3"></textarea>
+
+                        <label>Start Date</label>
+                        <input type="date">
+
+                        <label>End Date</label>
+                        <input type="date">
+
+                        <div class="checkbox-row">
+                            <input type="checkbox">
+                            <span>Active</span>
+                        </div>
+
+                        <button class="btn btn-success">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery FIRST -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Your custom JS AFTER -->
+    <script src="~/js/home.js"></script>
+
+
+</body>
+</html>

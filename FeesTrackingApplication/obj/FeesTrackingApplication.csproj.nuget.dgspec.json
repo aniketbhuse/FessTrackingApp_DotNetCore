@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[9.0.11, )"
             },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
             "Microsoft.SqlServer.Server": {
               "target": "Package",
               "version": "[1.0.0, )"

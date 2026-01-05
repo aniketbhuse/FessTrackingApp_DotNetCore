@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "ContainingType": "FeesTrackingApplication.Controllers.BatchesApiController",
+    "Method": "GetAll",
+    "RelativePath": "api/batches",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FeesTrackingApplication.Controllers.BatchesApiController",
+    "Method": "Index",
+    "RelativePath": "api/batches",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FeesTrackingApplication.Controllers.BatchesApiController",
+    "Method": "SyncFromAPI",
+    "RelativePath": "api/batches/sync",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

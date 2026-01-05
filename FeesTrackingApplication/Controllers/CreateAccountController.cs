@@ -19,26 +19,30 @@ namespace FeesTrackingApplication.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CretaeAccount(Students students)
+        public async Task<IActionResult> CreateAccount(Students students)
         {
             try
             {
                 if (!ModelState.IsValid)
-                { 
-                   return View(students);
+                {
+                    ViewBag.error = "Please Enter all Field..!";
+                    return View("CreateAccount", students);
                 }
 
-                var existingUser = await _context.Students.FirstOrDefaultAsync(u => u.UserName == students.UserName);
+                var existingUser = await _context.Students.
+                    FirstOrDefaultAsync(u => u.UserName == students.UserName  && u.PRN_Number == students.PRN_Number);
 
                 if (existingUser != null)
                 {
                     ViewBag.error = "Username already exists, please try another.";
-                    return View(students);
+                    return View("CreateAccount", students);
 
                 }
 
                 _context.Students.Add(students);
                 await _context.SaveChangesAsync();
+
+                TempData["Success"] = "Account Created Successfully! Click OK to Login.";
 
                 return RedirectToAction("Login", "Login");
 
@@ -47,7 +51,7 @@ namespace FeesTrackingApplication.Controllers
             {
                 // Log ex.Message in real project
                 ViewBag.error = "Something went wrong while creating the account. Try again!";
-                return View(students);
+                return View("CreateAccount", students);
 
             }
         }

@@ -51,6 +51,11 @@ namespace FeesTrackingApplication.Controllers
                     return View();
                 }
 
+                //  SESSION VALUES (ADD HERE)
+                HttpContext.Session.SetInt32("StudentId", user.Id);
+                HttpContext.Session.SetString("UserName", user.UserName);
+                HttpContext.Session.SetString("PRN", user.PRN_Number);
+
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name, user.UserName),
@@ -76,6 +81,9 @@ namespace FeesTrackingApplication.Controllers
         {
             try
             {
+                // CLEAR SESSION
+                HttpContext.Session.Clear();
+
                 await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
                 return RedirectToAction("Login");
             }

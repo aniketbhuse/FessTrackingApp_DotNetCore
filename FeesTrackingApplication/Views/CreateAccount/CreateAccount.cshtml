@@ -4,73 +4,167 @@
 
 @using FeesTrackingApplication.Models
 @model Students; 
-<div class="registration-container">
-    <div class="form-card">
-        <h2 class="animated-title">Join Us Today</h2>
-        <p class="text-center text-muted">Please fill in the details to create your account</p>
+<style>
+    /* ===== PAGE BACKGROUND ===== */
+    body {
+        background: linear-gradient(120deg, #f6f9ff, #eef2f7);
+        font-family: "Segoe UI", Roboto, sans-serif;
+        min-height: 100vh;
+    }
 
-        <form asp-action="CretaeAccount" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    /* ===== TOP LOGIN BOX ===== */
+    .auth-top {
+        background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+        color: #fff;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+        .auth-top h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .auth-top a {
+            color: #fff;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+
+    /* ===== REGISTRATION CONTAINER ===== */
+    .registration-container {
+        padding: 1rem;
+        padding-bottom: 3rem; /* ensures scroll works */
+    }
+
+    /* ===== FORM CARD ===== */
+    .form-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    /* ===== HEADINGS ===== */
+    .animated-title {
+        font-weight: 700;
+        color: #212529;
+    }
+
+    /* ===== LABELS (FIXED VISIBILITY) ===== */
+    .form-label {
+        font-weight: 600;
+        color: #212529;
+    }
+
+    /* ===== INPUTS ===== */
+    .form-control {
+        border-radius: 8px;
+        padding: 0.6rem 0.75rem;
+    }
+
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+        }
+
+    /* ===== BUTTON ===== */
+    .btn-primary {
+        border-radius: 30px;
+        font-weight: 600;
+    }
+
+    /* ===== MOBILE OPTIMIZATION ===== */
+    @@media (max-width: 576px) {
+        .form-card
+
+    {
+        padding: 1.5rem;
+    }
+
+    }
+</style>
+<div class="auth-top text-center">
+    <h3>Already Registered?</h3>
+    <p>Click below to login quickly</p>
+    <a href="/Login">Login</a>
+</div>
+
+<div class="registration-container">
+    <div class="form-card ">
+        <h2 class="titleAll text-center">Candidate Registration</h2>
+        <p class="text-center text-muted mb-4">Please fill in the details to create your account</p>
+
+        <form asp-action="CreateAccount" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger text-center mb-3"></div>
 
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label asp-for="PRN_Number" class="form-label">PRN Number</label>
-                    <input asp-for="PRN_Number" class="form-control" placeholder="Enter PRN" />
+                    <label asp-for="PRN_Number" class="form-label fw-semibold">PRN Number</label>
+                    <input asp-for="PRN_Number" class="form-control modern-input" placeholder="Enter PRN" />
                     <span asp-validation-for="PRN_Number" class="text-danger"></span>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label asp-for="UserName" class="form-label">Username</label>
-                    <input asp-for="UserName" class="form-control" placeholder="Choose a username" />
+                    <label asp-for="UserName" class="form-label fw-semibold">Username</label>
+                    <input asp-for="UserName" class="form-control modern-input" placeholder="Choose a username" />
                     <span asp-validation-for="UserName" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <label asp-for="FName" class="form-label">First Name</label>
-                    <input asp-for="FName" class="form-control" />
+                    <label asp-for="FName" class="form-label fw-semibold">First Name</label>
+                    <input asp-for="FName" class="form-control modern-input" />
                 </div>
                 <div class="col-md-4 mb-3">
-                    <label asp-for="MName" class="form-label">Middle Name</label>
-                    <input asp-for="MName" class="form-control" />
+                    <label asp-for="MName" class="form-label fw-semibold">Middle Name</label>
+                    <input asp-for="MName" class="form-control modern-input" />
                 </div>
                 <div class="col-md-4 mb-3">
-                    <label asp-for="LName" class="form-label">Last Name</label>
-                    <input asp-for="LName" class="form-control" />
+                    <label asp-for="LName" class="form-label fw-semibold">Last Name</label>
+                    <input asp-for="LName" class="form-control modern-input" />
                 </div>
             </div>
 
             <div class="mb-3">
-                <label asp-for="Email" class="form-label">Email Address</label>
-                <input asp-for="Email" type="email" class="form-control" placeholder="name@example.com" />
+                <label asp-for="Email" class="form-label fw-semibold">Email Address</label>
+                <input asp-for="Email" type="email" class="form-control modern-input" placeholder="name@example.com" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
 
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label asp-for="Phone" class="form-label">Phone Number</label>
-                    <input asp-for="Phone" class="form-control" />
+                    <label asp-for="Phone" class="form-label fw-semibold">Phone Number</label>
+                    <input asp-for="Phone" class="form-control modern-input" maxlength="10" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label asp-for="Password" class="form-label">Password</label>
-                    <input asp-for="Password" type="password" class="form-control" />
+                    <label asp-for="Password" class="form-label fw-semibold">Password</label>
+                    <input asp-for="Password" type="password" class="form-control modern-input" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="form-check mb-4">
                 <input asp-for="IsActive" class="form-check-input" checked />
-                <label class="form-check-label" asp-for="IsActive">I agree to the terms and conditions</label>
+                <label class="form-check-label" asp-for="IsActive">
+                    I agree to the terms and conditions
+                </label>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100 py-2">Create Account</button>
+            <button type="submit" class="btn btn-primary w-100 py-2 modern-btn">
+                Create Account
+            </button>
+
+            @if (ViewBag.error != null)
+            {
+                <p class="text-danger text-center mt-3">@ViewBag.error</p>
+            }
         </form>
     </div>
-    @if (ViewBag.error != null)
-    {
-        <p style="color:red">@ViewBag.error</p>
-    }
 </div>
+
 
 @section Scripts {
     @{

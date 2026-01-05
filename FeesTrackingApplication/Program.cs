@@ -1,8 +1,11 @@
 using FeesTrackingApplication.Data;
+using FeesTrackingApplication.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// ===================== SERVICES =====================
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -19,9 +22,29 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LogoutPath = "/Auth/Logout";
     });
 
+// Add Authorization
 builder.Services.AddAuthorization();
 
+
+// Add Authorization
+builder.Services.AddHttpClient();
+
+builder.Services.AddScoped<BatchService>();
+
+
+// Add Memory Cache (Required for Session)
+builder.Services.AddDistributedMemoryCache();
+// Add Session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // session timeout
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -32,7 +55,11 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseRouting();
+
+// Enable Session (MUST be here)
+app.UseSession();
 
 app.UseAuthentication();
 

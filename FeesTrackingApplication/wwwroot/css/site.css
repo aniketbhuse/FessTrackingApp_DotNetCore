@@ -114,33 +114,40 @@ body {
         }
 }
 
+.header-static {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 
 
 /* Login page */
 
 /* ---------------- Body & Background ---------------- */
+/* ---------------- Reset & Base ---------------- */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
     position: relative;
 }
 
+/* ---------------- Animated Background ---------------- */
 .animated-bg {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(-45deg,
-    #4158D0, /* Blue */
-    #C850C0, /* Pink */
-    #FFCC70, /* Yellow */
-    #0093E9, /* Sky Blue */
-    #F53844, /* Red */
-    #8A2BE2, /* Violet */
-    #00C9A7);
+    inset: 0;
+    background: linear-gradient(-45deg, #4158D0, #C850C0, #FFCC70, #0093E9, #F53844, #8A2BE2, #00C9A7 );
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     z-index: -1;
@@ -160,11 +167,11 @@ body {
     }
 }
 
-/* ---------------- Login Container ---------------- */
+/* ---------------- Layout ---------------- */
 .login-container {
     display: flex;
-    height: 100vh;
-    padding: 50px;
+    min-height: 100vh;
+    padding: 40px;
     gap: 40px;
 }
 
@@ -173,67 +180,59 @@ body {
     flex: 1;
 }
 
-/* Animated Title */
 .animated-title {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
     color: #0a66aa;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     animation: slideIn 1.3s ease forwards;
     opacity: 0;
 }
 
 @keyframes slideIn {
-    0% {
+    from {
         transform: translateY(-40px);
         opacity: 0;
     }
 
-    100% {
+    to {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-.login-heading {
-    font-size: 34px;
-    color: #ffffff;
-    font-weight: bold;
-}
-
 .signin-label {
     font-size: 20px;
-    margin-top: 20px;
-    color: #f0f0f0;
+    margin-bottom: 15px;
+    color: #ffffff;
 }
 
 label {
     font-size: 15px;
     margin-top: 15px;
     display: block;
-    color: black;
+    color: #ffffff;
 }
 
 input {
-    width: 80%;
+    width: 100%;
     padding: 12px;
     margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #bdbdbd;
+    border-radius: 6px;
+    border: 1px solid #ccc;
     outline: none;
 }
 
-/* Error Message */
+/* Error */
 .error-msg {
     color: #ff6b6b;
     margin-bottom: 10px;
 }
 
-/* Login Button */
+/* Button */
 .btn-login {
-    display: block;
-    width: 85%;
-    padding: 15px;
+    width: 100%;
+    padding: 14px;
     background: #006db6;
     color: white;
     font-weight: bold;
@@ -257,11 +256,10 @@ input {
     text-decoration: none;
 }
 
-/* Divider */
+/* ---------------- Divider ---------------- */
 .divider {
     width: 2px;
     background: rgba(255, 255, 255, 0.4);
-    height: 90vh;
 }
 
 /* ---------------- Right Section ---------------- */
@@ -293,6 +291,48 @@ input {
         color: #0a66aa;
     }
 
+/* =================== MOBILE =================== */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .animated-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .signin-label {
+        text-align: center;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .right-section {
+        padding-top: 40px;
+    }
+
+        .right-section h3 {
+            font-size: 20px;
+        }
+}
+
+/* =================== SMALL MOBILE =================== */
+@media (max-width: 480px) {
+    .animated-title {
+        font-size: 24px;
+    }
+
+    .btn-create,
+    .btn-login {
+        font-size: 14px;
+    }
+}
+
+
 /* ---------------- Logout and User Name section ---------------- */
 
 .user-info {
@@ -313,100 +353,13 @@ input {
 
 /* ---------------- Create Account Section ---------------- */
 
-/* Container styling */
-.registration-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Use 100vh to ensure it fills the screen, or 'auto' if you have a header */
-    min-height: 100vh;
-    padding: 40px 20px; /* Increased vertical padding for breathing room on mobile */
-    background-color: #f8f9fa;
-    /* Ensure overflow is allowed */
-    overflow-y: auto;
-}
 
-html, body {
-    height: auto; /* Allow the body to grow with content */
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    margin: 0;
-    padding: 0;
-}
-
-/* Card Styling */
-.form-card {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    width: 100%;
-}
-
-/* --- ANIMATED TITLE --- */
-.animated-title {
-    text-align: center;
-    font-weight: 700;
-    color: #333;
-    position: relative;
-    animation: showHideLoop 4s ease-in-out infinite;
-}
-
-/* Animation that repeats forever */
-@keyframes showHideLoop {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    20% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    80% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-}
-
-
-/* Form Controls */
-.form-control:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
-}
-
-.btn-primary {
-    transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-    .btn-primary:hover {
-        transform: translateY(-2px);
-    }
-
-
-
-.user-name-animate {
+.titleAll {
     font-weight: 600;
-    color: #4b4b4b;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
+    color: #df1f0a;
     animation: userBlinkSlide 4s ease-in-out infinite;
 }
 
-/* Looping Animation */
 @keyframes userBlinkSlide {
     0% {
         opacity: 0;
@@ -420,7 +373,6 @@ html, body {
 
     50% {
         opacity: 1;
-        transform: translateX(0);
     }
 
     80% {
@@ -433,3 +385,312 @@ html, body {
         transform: translateX(10px);
     }
 }
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+}
+
+/* PAGE */
+.page-container {
+    min-height: 100vh;
+}
+
+/* HEADER */
+.page-header {
+    background: linear-gradient(90deg, #6a11cb, #25fc7f69);
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 110px;
+    width: 1190px;
+    margin-left: -38px;
+}
+
+.header-left h1 {
+    font-size: 28px;
+}
+
+.header-left p {
+    color: #e0d7ff;
+    margin-top: 5px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-white {
+    background: white;
+    color: #333;
+}
+
+.btn-outline {
+    border: 2px solid #fff;
+    background: transparent;
+    color: white;
+}
+
+.btn-success {
+    border: 2px solid #16a34a;
+    color: #16a34a;
+    background: white;
+    width: 100%;
+}
+
+    .btn-success:hover {
+        background: #e8f9ef;
+    }
+
+/* VIEW TOGGLE */
+.view-toggle {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    background: white;
+}
+
+    .toggle-btn.active {
+        background: #2563eb;
+        color: white;
+    }
+
+/* CONTENT */
+.content {
+    padding: 5px;
+    width: 1190px;
+    margin-left: -38px;
+}
+
+/* TABLE */
+.table-wrapper {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    overflow-x: auto;
+}
+
+.batch-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .batch-table thead {
+        background: linear-gradient(90deg, #2563eb, #4f46e5);
+        color: white;
+    }
+
+    .batch-table th,
+    .batch-table td {
+        padding: 14px 18px;
+        text-align: left;
+    }
+
+    .batch-table tbody tr {
+        border-bottom: 1px solid #eee;
+    }
+
+        .batch-table tbody tr:hover {
+            background: #eef4ff;
+        }
+
+/* STATUS */
+.status.active {
+    color: #16a34a;
+    font-weight: 600;
+}
+
+.status.inactive {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+/* ACTIONS */
+.actions {
+    text-align: center;
+}
+
+.icon-btn {
+    padding: 6px 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin: 0 4px;
+}
+
+    .icon-btn.edit {
+        background: #e0ecff;
+        color: #2563eb;
+    }
+
+    .icon-btn.delete {
+        background: #fee2e2;
+        color: #dc2626;
+    }
+
+/* MODAL */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: white;
+    width: 420px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+    .modal-body label {
+        display: block;
+        margin-top: 12px;
+        font-weight: 600;
+    }
+
+    .modal-body input,
+    .modal-body textarea {
+        width: 100%;
+        margin-top: 6px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+/* CSS Code For the Card View And Table View*/
+
+/* Toggle */
+.toggle-btn {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+    .toggle-btn.active {
+        background: #007bff;
+        color: #fff;
+    }
+
+/* Hide */
+.hidden {
+    display: none;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.batch-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+    .batch-card h3 {
+        margin: 0 0 10px;
+    }
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+    .badge.active {
+        background: #28a745;
+        color: #fff;
+    }
+
+    .badge.inactive {
+        background: #dc3545;
+        color: #fff;
+    }
+
+.card-actions {
+    margin-top: 10px;
+}
+
+/* Pagination CSS*/
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+    .pagination button {
+        margin: 0 4px;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        background: white;
+        cursor: pointer;
+    }
+
+        .pagination button.active {
+            background: #007bff;
+            color: white;
+        }

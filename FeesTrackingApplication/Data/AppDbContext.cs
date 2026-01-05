@@ -1,5 +1,6 @@
 ﻿using FeesTrackingApplication.Models;
 using Microsoft.EntityFrameworkCore;
+using OpenTelemetry;
 
 namespace FeesTrackingApplication.Data
 {
@@ -8,5 +9,7 @@ namespace FeesTrackingApplication.Data
         public AppDbContext (DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<Students> Students { get; set; }
+
+        public DbSet<Batches> Batches { get; set; }
     }
 }

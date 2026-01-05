@@ -16,7 +16,7 @@
 <body>
 
     <!--  Your Existing Header (NOT Removed) -->
-    <header>
+    <header class="header-static">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Fees Tracking Application</a>
@@ -34,7 +34,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
-
+                   
                     <!-- 👇 USER INFO & LOGOUT BUTTON -->
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
@@ -62,7 +62,7 @@
     </header>
 
     <!-- 🔥 Main Content -->
-    <div id="contentArea" class="container">
+    <div id="contentArea" style="margin-top: 63px;"class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
